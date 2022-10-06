@@ -2,8 +2,10 @@ import express from 'express';
 
 const app = express()
 
+app.use(express.json())
+
 app.get('/',(request, response) =>{
-   // console.log(request.query.name)
+    console.log(request.body.age)
     response.json({title:`HALLO ${request.query.name}`})
 })
 
